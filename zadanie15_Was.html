@@ -1,0 +1,21 @@
+<html>
+<body>
+<div style="color:green; font-size:53px;">
+<script language="JavaScript">
+// Kasia Wasilewska 11.10.2025
+// Zadanie - Rozkład ułamka egipskiego na dwa takie same ułamki egipskie
+
+var m_Was = prompt("Podaj wartość m =", "");
+var m = parseFloat(m_Was);
+var ulamkiMianownik = 2 * m;
+
+document.write("Ułamki egipskie to ułamki proste, w których w liczniku jest 1.<br>");
+document.write("Ułamek 1/" + m + " można zapisać jako sumę dwóch takich samych ułamków egipskich:<br><br>");
+document.write("Dla m=" + m + ":<br>");
+document.write("1/" + m + " = 1/" + ulamkiMianownik + " + 1/" + ulamkiMianownik + "<br>");
+</script>
+</div>
+
+<input type="button" value="zamknij okno" onclick="window.close()"/>
+</body>
+</html>

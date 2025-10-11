@@ -1,0 +1,41 @@
+<html> 
+   <body> 
+     <textarea cols="90" rows="24"> 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sterowanie wydrukami – (A + B)^3</title>
+</head>
+<body>
+<div style="color:green; font-size:53px;">
+<script language="JavaScript">
+// Kasia Wasilewska 11.10.2025
+// Sterowanie wydrukami
+
+var D1_bil = prompt("Podaj pierwszą liczbę A=");
+var D2_bil = prompt("Podaj drugą liczbę B=");
+
+var a = parseFloat(D1_bil);
+var b = parseFloat(D2_bil);
+
+var c = a * a * a;
+var d = 3 * a * a * b;
+var e = 3 * a * b * b;
+var f = b * b * b;
+var o = c + d + e + f;
+
+document.write("Wczytane liczby: A=" + a + ", B=" + b + "<br><br>");
+document.write("(" + a + " + " + b + ")³ = " + a + "³ + 3×" + a + "²×" + b + " + 3×" + a + "×" + b + "² + " + b + "³<br><br>");
+document.write("= " + c + " + " + d + " + " + e + " + " + f + " = " + o + "<br>");
+</script>
+</div>
+
+<br>
+<input type="button" value="Zamknij okno" onclick="window.close()" style="font-size:20px;">
+</body>
+</html>
+
+      </textarea> 
+    </body> 
+</html> 

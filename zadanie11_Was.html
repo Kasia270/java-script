@@ -1,0 +1,24 @@
+<html>
+<body>
+<div style="color:green; font-size:53px;">
+<script language="JavaScript">
+// Kasia Wasilewska 11.10.2025
+// Zadanie 11
+
+var D1_Was = prompt("Data1=", "");
+var D2_Was = prompt("Data2=", "");
+
+var d1 = parseFloat(D1_Was);
+var d2 = parseFloat(D2_Was);
+var sekund = (d1 - d2) * 24 * 60 * 60;
+
+document.write("Ilość sekund między dniami stycznia " + d1 + " i " + d2 + " = " + sekund + " sekund<br>");
+
+function okno_zamknij_Was() {
+  window.close();
+}
+</script>
+</div>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_Was()"/>
+</body>
+</html>

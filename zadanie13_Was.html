@@ -1,0 +1,23 @@
+<html>
+<body>
+<div style="color:green; font-size:53px;">
+<script language="JavaScript">
+// Kasia Wasilewska 11.10.2025
+// Zadanie - Ułamek egipski
+
+var m_Was = prompt("Podaj wartość m =", "");
+var m = parseFloat(m_Was);
+
+var m1 = m + 1;
+var m2 = m * (m + 1);
+
+document.write("Ułamki egipskie to ułamki proste, w których w liczniku jest 1.<br>");
+document.write("Ułamek 1/" + m + " można zapisać jako sumę dwóch ułamków egipskich:<br><br>");
+document.write("Dla m=" + m + ":<br>");
+document.write("1/" + m + " = 1/" + m1 + " + 1/" + m2 + "<br>");
+</script>
+</div>
+
+<input type="button" value="zamknij okno" onclick="window.close()"/>
+</body>
+</html>
