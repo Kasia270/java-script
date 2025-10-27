@@ -1,28 +1,33 @@
 <html> 
    <body> 
      <textarea cols="90" rows="24"> 
-<html>
-<body>
-<div style="color:green; font-size:53px;">
-<script language="JavaScript">
-// Kasia Wasilewska 11.10.2025
-// Zadanie - Rozkład ułamka egipskiego na dwa takie same ułamki egipskie
-
-var m_Was = prompt("Podaj wartość m =", "");
-var m = parseFloat(m_Was);
-var ulamkiMianownik = 2 * m;
-
-document.write("Ułamki egipskie to ułamki proste, w których w liczniku jest 1.<br>");
-document.write("Ułamek 1/" + m + " można zapisać jako sumę dwóch takich samych ułamków egipskich:<br><br>");
-document.write("Dla m=" + m + ":<br>");
-document.write("1/" + m + " = 1/" + ulamkiMianownik + " + 1/" + ulamkiMianownik + "<br>");
-</script>
-</div>
-
-<input type="button" value="zamknij okno" onclick="window.close()"/>
-</body>
-</html>
+<html> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <link rel="stylesheet" href="styl.css"> 
+ </head> 
+<body> 
+ <script type="text/javascript"> 
+  function pole_Wasilewska() 
+   { 
+ var a_Was= parseFloat(document.getElementById('dlugosc').value); 
+ var b_Was= a*a; 
+        document.getElementById("nazwa").innerHTML ="Pole kwadratu= "+b.toFixed(2)+" cm^2";  
+   } 
+  function obwod_Wasilewska() 
+   { 
+ var a_Was= parseFloat(document.getElementById('dlugosc').value); 
+ var b_Was= 4*a; 
+        document.getElementById("nazwa").innerHTML ="Obwód kwadratu= "+b.toFixed(2)+" cm";  
+   } 
+ </script> 
+  <h1>Wszystko o KWADRACIE</h1><br><br> 
+  Podaj długość boku: <input type="text" id="dlugosc" value="podaj długość"> cm<br><br><br> 
+  <input type="button" name="pole" value="Oblicz pole" Onclick="pole()"><br><br> 
+  <input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod()"><br><br> 
+  <div  style="color:red;font-size:50px;"id="nazwa"></div> 
+</body> 
+</html> 
       </textarea> 
     </body> 
-
 </html> 
