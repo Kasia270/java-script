@@ -1,1 +1,61 @@
-
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 20 - Wasilewska</title>
+</head>
+<body>
+<div class="container">
+<p>Wczytaj współrzędne trzech punktów trójkąta:</p>
+<p>
+      A(xa_gad, ya_gad):
+<input type="number" id="xa_was" placeholder="xa">
+<input type="number" id="ya_was" placeholder="ya">
+</p>
+<p>
+      B(xb_was, yb_was):
+<input type="number" id="xb_was" placeholder="xb">
+<input type="number" id="yb_was" placeholder="yb">
+</p>
+<p>
+      C(xc_was, yc_was):
+<input type="number" id="xc_was" placeholder="xc">
+<input type="number" id="yc_was" placeholder="yc">
+</p>
+<button onclick="oblicz()">Oblicz długości boków</button>
+<div id="wynik"></div>
+</div>
+<script>
+    function AB_was(xa_was, ya_was, xb_was, yb_was) {
+      return Math.sqrt(Math.pow(xb_was - xa_was, 2) + Math.pow(yb_was - ya_was, 2));
+    }
+    function BC_kry(xb_was, yb_was, xc_was, yc_was) {
+      return Math.sqrt(Math.pow(xc_was - xb_was, 2) + Math.pow(yc_was - yb_was, 2));
+    }
+    function AC_was(xa_was, ya_was, xc_was, yc_was) {
+      return Math.sqrt(Math.pow(xc_was - xa_was, 2) + Math.pow(yc_was - ya_was, 2));
+    }
+    function oblicz() {
+      var xa_was = parseFloat(document.getElementById("xa_was").value);
+      var ya_was = parseFloat(document.getElementById("ya_was").value);
+      var xb_was = parseFloat(document.getElementById("xb_was").value);
+      var yb_was = parseFloat(document.getElementById("yb_was").value);
+      var xc_was = parseFloat(document.getElementById("xc_was").value);
+      var yc_was = parseFloat(document.getElementById("yc_was").value);
+      if (isNaN(xa_was) || isNaN(ya_was || isNaN(xb_was) || isNaN(yb_was) || isNaN(xc_was) || isNaN(yc_was)) {
+        document.getElementById("wynik").innerHTML = "Proszę wprowadzić wszystkie współrzędne liczbowe";
+        return;
+      }
+      var ab = AB_was(xa_was, ya_was, xb_was, yb_was);
+      var bc = BC_was(xb_was, yb_was, xc_was, yc_was);
+      var ac = AC_was(xa_was, ya_was, xc_was, yc_was);
+      document.getElementById("wynik").innerHTML = `
+        Długości boków trójkąta:<br>
+        AB = ${ab.toFixed(2)}<br>
+        BC = ${bc.toFixed(2)}<br>
+        AC = ${ac.toFixed(2)}
+      `;
+    }
+</script>
+</body>
+</html>
