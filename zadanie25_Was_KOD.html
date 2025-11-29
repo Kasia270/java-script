@@ -1,7 +1,37 @@
 <html> 
    <body> 
      <textarea cols="90" rows="24"> 
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<script>
+function zad25() {
+  let N0 = parseFloat(prompt("Podaj ilość początkową N0 [sztuk]"));
+  let t = parseFloat(prompt("Podaj czas t [lat]"));
+  let T12 = parseFloat(prompt("Podaj czas połowiczny T1/2 [lat]"));
+  let lambda = Math.LN2 / T12;
+  let N = N0 * Math.exp(-lambda * t);
 
+
+  document.getElementById("N0").innerHTML = "N0 = " + N0 + " [sztuk]";
+  document.getElementById("t").innerHTML = "t = " + t + " [lat]";
+  document.getElementById("T12").innerHTML = "T1/2 = " + T12 + " [lat]";
+  document.getElementById("lam").innerHTML = "Lambda = " + lambda.toFixed(7) + " [1/rok]";
+  document.getElementById("N").innerHTML = "N = " + N.toFixed(7) + " [sztuk]";
+}
+window.onload = zad25;
+</script>
+</head>
+<body style="color: blue; font-size: 22px;">
+<div id="N0"></div>
+<div id="t"></div>
+<div id="T12"></div>
+<div id="lam"></div><br>
+<div id="N" style="font-weight: bold; font-size: 26px;"></div>
+
+</body>
+</html>
       </textarea> 
     </body> 
 </html>
