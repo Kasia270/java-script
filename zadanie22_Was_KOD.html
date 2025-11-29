@@ -1,7 +1,31 @@
 <html> 
    <body> 
      <textarea cols="90" rows="24"> 
-
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Prostokąt – pole i obwód</title>
+<script>
+function Pole_wasilewska(a,b){ return a*b; }
+function obwod_wasilewska(a,b){ return 2*(a+b); }
+function licz(){
+let a = parseFloat(document.getElementById('a_was').value);
+let b = parseFloat(document.getElementById('b_was').value);
+document.getElementById('pole').value = Pole_wasilewska(a,b);
+document.getElementById('obw').value = obwod_wasilewska(a,b);
+}
+</script>
+</head>
+<body>
+<h2>Prostokąt – obliczenia</h2>
+A: <input id="a_was" type="number"><br><br>
+B: <input id="b_was" type="number"><br><br>
+<button onclick="licz()">Oblicz</button><br><br>
+Pole: <input id="pole" readonly><br><br>
+Obwód: <input id="obw" readonly><br><br>
+</body>
+</html>
       </textarea> 
     </body> 
 </html> 
