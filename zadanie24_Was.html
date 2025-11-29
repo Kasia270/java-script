@@ -2,7 +2,6 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<title>Zadanie 24 – Math</title>
 <script>
 function zad24(){
   let x1 = parseFloat(prompt("Podaj x1_was"));
@@ -10,6 +9,7 @@ function zad24(){
 
   document.getElementById("x1").innerHTML = "x1 = " + x1 + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
   document.getElementById("x2").innerHTML = "x2 = " + x2;
+
   let n = 5;
   let y1 = 3 * Math.pow(x1, n+2);
   document.getElementById("y1").innerHTML = y1.toFixed(2);
@@ -19,10 +19,13 @@ function zad24(){
   let y3 = Math.cbrt( Math.pow(x1,5) + 2*Math.pow(x2,4) * Math.abs(x1-x2) );
   document.getElementById("y3").innerHTML = y3.toFixed(3);
 }
+
+window.onload = zad24;
 </script>
 </head>
-<body>
-<button onclick="zad24()">Wczytaj dane i oblicz</button><br><br>
+<body style="color: blue;">
+<h3>Zadanie 24 – Obliczenia</h3>
+
 <div id="x1"></div>
 <div id="x2"></div><br>
 
