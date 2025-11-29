@@ -1,1 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Drabina</title>
+<script>
+function dlugosc(d, x) {
+  return Math.sqrt(d*d + x*x);
+}
+
+function kat(d, x) {
+  return Math.atan(d/x) * 180 / Math.PI;
+}
+
+function licz() {
+  let d = parseFloat(document.getElementById("d").value);
+  let x = parseFloat(document.getElementById("x").value);
+
+  document.getElementById("drabina").value = dlugosc(d,x).toFixed(2);
+  document.getElementById("alfa").value = kat(d,x).toFixed(2);
+}
+</script>
+</head>
+<body>
+<h3>Obliczanie drabiny</h3>
+Podaj d: <input id="d" type="number"><br><br>
+Podaj x: <input id="x" type="number"><br><br>
+<button onclick="licz()">Oblicz</button><br><br>
+Drabina: <input id="drabina" readonly><br><br>
+Alfa: <input id="alfa" readonly><br><br>
+
+</body>
+</html>
 
