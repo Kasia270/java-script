@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 24 – Math</title>
+<script>
+function zad24(){
+  let x1 = parseFloat(prompt("Podaj x1_kow"));
+  let x2 = parseFloat(prompt("Podaj x2_kow"));
+
+  document.getElementById("x1").innerHTML = "x1 = " + x1 + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+  document.getElementById("x2").innerHTML = "x2 = " + x2;
+  let n = 5;
+  let y1 = 3 * Math.pow(x1, n+2);
+  document.getElementById("y1").innerHTML = y1.toFixed(2);
+  let rad = x1 * Math.PI / 180;
+  let y2 = 2 * Math.cos(rad) + 3 * Math.sin(rad);
+  document.getElementById("y2").innerHTML = y2.toFixed(2);
+  let y3 = Math.cbrt( Math.pow(x1,5) + 2*Math.pow(x2,4) * Math.abs(x1-x2) );
+  document.getElementById("y3").innerHTML = y3.toFixed(3);
+}
+</script>
+</head>
+<body>
+<h3>Zadanie 24 – obliczenia</h3>
+
+<button onclick="zad24()">Wczytaj dane i oblicz</button><br><br>
+<div id="x1"></div>
+<div id="x2"></div><br>
+
+Y1: <span id="y1"></span><br>
+Y2: <span id="y2"></span><br>
+Y3: <span id="y3"></span><br>
+
+</body>
+</html>
