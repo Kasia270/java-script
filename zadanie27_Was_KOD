@@ -1,7 +1,42 @@
 <html> 
    <body> 
      <textarea cols="90" rows="24"> 
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<form id="form">
+  Odległość Artura od Dawida: <input type="number" id="odl_was" required><br>
+  Droga samolotu nad Dawidem: <input type="number" id="s_was" required><br>
+  <button type="submit">Oblicz</button>
+</form>
+<p id="wynik"></p>
+<script>
+function obliczWysokosc(droga, kat) {
+    return droga * Math.sin(kat * Math.PI / 180);
+}
+function obliczKat(odleglosc, droga) {
+    return Math.asin(odleglosc / droga) * 180 / Math.PI;
+}
 
+document.getElementById("form").onsubmit = function(event) {
+    event.preventDefault();
+
+    var odl = Number(document.getElementById("odl_was").value);
+    var droga = Number(document.getElementById("s_was").value);
+
+    var kat = obliczKat(odl, droga);
+    var wysokosc = obliczWysokosc(droga, kat);
+
+    document.getElementById("wynik").innerText =
+        "Wysokość nad Dawidem: " + wysokosc.toFixed(2) +
+        "\nKąt startu: " + kat.toFixed(2) + "°";
+};
+</script>
+</body>
+</html>
       </textarea> 
     </body> 
 </html> 
