@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<h2>Obliczanie pola i obwodu trapezu równoramiennego</h2>
+<form id="form">
+    Górna podstawa (a): <input type="number" id="a"><br><br>
+    Dolna podstawa (b): <input type="number" id="b"><br><br>
+    Wysokość (h): <input type="number" id="h"><br><br>
+
+    <button type="submit">Oblicz</button>
+</form>
+<br>
+Pole: <input type="text" id="wynik_pole" readonly><br><br>
+Obwód: <input type="text" id="wynik_obwod" readonly><br><br>
+
+<script>
+function Pow_wasilewska(a, b, h) {
+    return ((a + b) / 2) * h;
+}
+function Obw_wasilewska(a, b, h) {
+    var roznica = Math.abs(a - b);
+    var r = Math.sqrt((roznica / 2) ** 2 + h ** 2);
+    return a + b + 2 * r;
+}
+document.getElementById("form").onsubmit = function(e) {
+    e.preventDefault();
+
+    var a = Number(document.getElementById("a").value);
+    var b = Number(document.getElementById("b").value);
+    var h = Number(document.getElementById("h").value);
+
+    var pole = Pow_wasilewska(a, b, h);
+    var obwod = Obw_wasilewska(a, b, h);
+    document.getElementById("wynik_pole").value = pole.toFixed(2);
+    document.getElementById("wynik_obwod").value = obwod.toFixed(2);
+    document.write(
+
+        "Pole trapezu: " + pole.toFixed(2) + "<br>" +
+        "Obwód trapezu: " + obwod.toFixed(2)
+    );
+};
+</script>
+</body>
+</html>
