@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<style>
+    body { font-family: Arial, sans-serif; margin: 12px; line-height: 1.3; }
+    h1 { font-size: 32px; }
+    h2 { font-size: 26px; }
+    h3 { font-size: 20px; }
+    .sekcja { margin-bottom: 15px; }
+    code { background:#fafafa; padding:4px; display:block; }
+</style>
+</head>
+<body>
+
+<div class="sekcja">
+<h2>1. Określanie właściwości obiektu </h2>
+	<p><b>Sposób 1 - zapis kropkowy</b></p>
+<code>auto.marka = "Opel";<br>auto.rok = 1996;</code>
+	<p><b>Sposób 2 - zapis tablicowy </b></p>
+<code>auto["cena"] = 25000;</code>
+</div>
+
+<div class="sekcja">
+<h2>2. Odwołanie do pól i metod</h2>
+	<p>Do pól i metod odwołujemy się przez nazwę obiektu i kropkę.</p>
+<code>console.log(samochod1.kolor);<br>samochod1.jedz();</code>
+</div>
+
+<div class="sekcja">
+<h2>3. Cechy charakterystyczne konstruktora</h2>
+<ul>
+<li>Wywoływany automatycznie w chwili tworzenia obiektu</li>
+<li>Nazywa się tak samo jak klasa</li>
+<li>Nie zwraca wartości</li>
+<li>Może przyjmować argumenty, jak zwykła funkcja lub metoda</li>
+</ul>
+</div>
+
+<div class="sekcja">
+<h2>4. Konstruowanie obiektu – przykład</h2>
+<code>
+var osoba_1 = <br>
+} <br>
+&nbsp;nazwisko: 'Kowalski',<br>
+&nbsp;imie: 'Jan',<br>
+&nbsp;zawod: 'piekarz',<br>
+&nbsp;wyswietl: function() <br>
+&nbsp;&nbsp;document.write(this.nazwisko + ' ' + this.imie);
+&nbsp; <br>
+} <br>
+}
+</code>
+</div>
+
+<div class="sekcja">
+<h2>5. Znaczenie słowa this</h2>
+<p>Słowo <b>this</b> pozwala odwołać się do pól i metod aktualnego obiektu. Pola i metody oddzielamy przecinkami.</p>
+</div>
+
+<div class="sekcja">
+<h2>6. Konstruktor w JavaScript</h2>
+<code>
+function Klient(nazwisko_k, imie_k, zawod_k) <br>
+{<br>
+&nbsp;this.nazwisko = nazwisko_k;<br>
+&nbsp;this.imie = imie_k;<br>
+&nbsp;this.zawod = zawod_k;<br><br>
+&nbsp;wypisz = function() <br>
+{ <br>
+&nbsp;alert(this.nazwisko + ' ' + this.imie) <br>
+} <br>
+} <br>
+</code>
+</div>
+
+<div class="sekcja">
+<h2>7. Słowo kluczowe new</h2>
+<p>Słowo <b>new</b> służy do tworzenia nowego obiektu na podstawie konstruktora.</p>
+<code>
+var osoba1 = new Klient("Kowalski", "Jan", "kierowca");
+</code>
+</div>
+
+<div class="sekcja">
+<h2>8. Prototype</h2>
+<p><b>Prototype umożliwia dodawanie metod i właściwości wspólnych dla wszystkich obiektów danej funkcji.</b></p>
+<code>
+&nbsp;function klient() <br>
+{ <br>
+&nbsp;this.nazwisko='Bielski';
+&nbsp;this.name='Paweł'; <br>
+} <br>
+klient.prototype.pisz_dane = function() <br>
+{ <br>
+&nbsp;document.write(this.nazwisko + ' ' + this.imie);<br>
+} <br>
+&nbsp;klient.prototype.zawod = 'kierowca'; <br>
+&nbsp;var osoba1 = new klient(); <br>
+&nbsp;osoba1.pisz_dane(); 
+</code>
+</div>
+
+</body>
+</html>
