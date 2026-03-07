@@ -10,7 +10,7 @@
 if (screen.width==800 && screen.height==600) {
  window.location="zadanie38_e4_Wasilewska_800.html";
 } 
-else if (screen.width==1024 && screen.height==768) {
+else if (screen.width==1920 && screen.height==1080) {
  window.location="zadanie38_e4_Wasilewska_1024.html";
 } 
 else {
