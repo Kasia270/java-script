@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Wasilewska Z39_JS</title>
+<meta charset="utf-8">
+</head>
+<body>
+<h1 style="color:green">MENU</h1>
+<p style="color:red">1 - CZERWONY</p>
+<p style="color:blue">2 - NIEBIESKI</p>
+
+<input type="button" value="Oblicz" onclick="fun_was()">
+<script>
+function fun_was()
+{
+let x_was = prompt("Podaj kolor (1,2,czerwony,niebieski)","");
+
+if(x_was==1 || x_was.toLowerCase()=="czerwony")
+{
+document.write('<font color="red" size="7">wczytałeś kolor czerwony</font>');
+}
+else if(x_was==2 || x_was.toLowerCase()=="niebieski")
+{
+document.write('<font color="blue" size="1">wczytałeś kolor niebieski</font>');
+}
+}
+</script>
+</body>
+</html>
+
+<!-- Wasilewska Z39_JS -->
