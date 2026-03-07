@@ -1,7 +1,102 @@
 <html> 
    <body> 
      <textarea cols="90" rows="24"> 
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Wasilewska Z42_JS</title>
 
+<style>
+body{
+background:silver;
+font-family:Arial;
+}
+
+.wynik{
+color:green;
+font-size:40px;
+}
+
+button{
+font-size:20px;
+margin:5px;
+padding:10px;
+}
+</style>
+<script>
+function program(){
+
+let imie="Kasia";
+let nazwisko="Wasilewska";
+let dzien_urodzenia=23;   
+
+let liczba1=imie.length;
+let liczba2=liczba1+7;
+let liczba3=nazwisko.length;
+let liczba4=liczba3+4;
+
+document.write("<div class='wynik'>");
+document.write("Moje nazwisko i imię: "+imie+" "+nazwisko+"<br>");
+document.write("liczba1 = "+liczba1+"<br>");
+document.write("liczba2 = "+liczba1+" + 7 = "+liczba2+"<br>");
+document.write("liczba3 = "+liczba3+"<br>");
+document.write("liczba4 = "+liczba3+" + 4 = "+liczba4+"<br><br>");
+document.write("</div>");
+
+let opcja=prompt(
+"MENU\n"+
+"1 - teoria operatorów logicznych\n"+
+"2 - czy liczba należy do przedziału (od ; do]\n"+
+"3 - czy liczba należy do przedziału (-∞ liczba1) lub [liczba2 +∞)"
+);
+
+if(opcja==1){
+document.write("<h2>Teoria operatorów logicznych</h2>");
+
+let a=prompt("Podaj a");
+let b=prompt("Podaj b");
+
+if(a%8==3 && b%4==2)
+document.write("a%8==3 && b%4==2 -> prawda<br>");
+else
+document.write("a%8==3 && b%4==2 -> fałsz<br>");
+
+if(a%8==3 || b%4==2)
+document.write("a%8==3 || b%4==2 -> prawda<br>");
+else
+document.write("a%8==3 || b%4==2 -> fałsz<br>");
+}
+else if(opcja==2){
+
+let liczba=prompt("Podaj liczbę");
+
+if(liczba>liczba3 && liczba<=liczba4)
+document.write("<h2>liczba należy do przedziału</h2>");
+else
+document.write("<h2>liczba nie należy do przedziału</h2>");
+}
+else if(opcja==3){
+
+let liczba=prompt("Podaj liczbę");
+
+if(liczba<liczba1 || liczba>=liczba2)
+document.write("<h2>liczba należy do przedziału</h2>");
+else
+document.write("<h2>liczba nie należy do przedziału</h2>");
+}
+else{
+document.write("<h2>nie ma takiej opcji</h2>");
+}
+}
+</script>
+</head>
+<body>
+<button onclick="program()">Uruchom program</button>
+</body>
+</html>
+
+<!-- Wasilewska Z42_JS -->
 
       </textarea> 
     </body> 
