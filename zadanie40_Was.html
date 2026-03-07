@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
-<!-- polskie litery mają działać(uzupełnij w kodzie strony meta) -->
-<!-- title -> Z40 oraz nazwisko ucznia -->
+<head>
+<meta charset="utf-8">
+<title>Wasilewska Z40_JS</title>
+</head>
 <body>
 <div style="color:red;font-size:50px;">
- <script language="JavaScript">
+<script>
 var x=prompt("podaj argument x=","");
- var x_was=parseFloat(x);
-zmienna x_was
-document.write(wykonała Kasia Wasilewska);
- document.write("czytany argument x="+x_was+"<br>");
- function f_was(x_was) {
- if(x_was>=1) {return 1;}
- if((x_was=>-2)&&(x_was<1)) {return x_was*x_was;}
- if(x_was<-2) {return 4;}
- }
- document.write("f="+f_was(x_was)+"<br>");
- </script>
+var x_was=parseFloat(x);
+document.write("wykonała Kasia Wasilewska<br>");
+document.write("czytany argument x="+x_was.toFixed(2)+"<br>");
+function f_was(x_was)
+{
+if(x_was>=1) {return 1;}
+else if(x_was>=-2 && x_was<1) {return x_was*x_was;}
+else if(x_was<-2) {return 4;}
+}
+
+document.write("f("+x_was.toFixed(2)+")="+f_was(x_was).toFixed(2));
+
+</script>
 </div>
 </body>
 </html>
-<!-- Wasilewska i Z40_JS -->
+
+<!-- Wasilewska Z40_JS -->
