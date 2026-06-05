@@ -13,29 +13,31 @@ color:green;
 font-size:42px;
 }
 
-button{
-font-size:20px;
-margin:5px;
-padding:10px;
-}
 </style>
-
 </head>
 <body>
-<div class="wynik" id="wynik"></div>
+<div id="wynik_was"></div>
 <script>
-let wynik_was = document.getElementById("wynik");
-for(let iwas = 1; iwas <= 10; iwas++)
+let wynik_was = document.getElementById("wynik_was");
+let ile_razy_was = (10 % 4) + 10;
+let wielkosc_liter_was = (10 % 3) + 40;
+
+wynik_was.innerHTML += "ilość wykonania pętli = " + ile_razy_was + "<br>";
+wynik_was.innerHTML += "wielkość liter = " + wielkosc_liter_was + "px<br><br>";
+
+for(let iwas = 1; iwas <= ile_razy_was; iwas++)
 {
     if(iwas % 2 == 1)
     {
-        wynik_was.innerHTML += "Wasilewska<br>";
+        wynik_was.innerHTML += "<span class='wynik'>Wasilewska</span><br>";
     }
     else
     {
-        wynik_was.innerHTML += "Kasia<br>";
-    }
+        wynik_was.innerHTML += "<span class='wynik'>Kasia</span><br>";
 }
+}
+
 </script>
 </body>
 </html>
+
