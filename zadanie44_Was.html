@@ -1,12 +1,41 @@
-<html>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<style>
+body{
+background:silver;
+font-family:Arial;
+}
+
+.wynik{
+color:green;
+font-size:42px;
+}
+
+button{
+font-size:20px;
+margin:5px;
+padding:10px;
+}
+</style>
+
+</head>
 <body>
-<div style="color:red;font-size:50px;">
- <script language="JavaScript">
- for(i=1;i<=10;i++)
- {
- document.write("wyświetlam "+i+" raz"+" Wasilewska"+"<br>");
- }
- </script>
-</div>
+<div class="wynik" id="wynik"></div>
+<script>
+let wynik_was = document.getElementById("wynik");
+for(let iwas = 1; iwas <= 10; iwas++)
+{
+    if(iwas % 2 == 1)
+    {
+        wynik_was.innerHTML += "Wasilewska<br>";
+    }
+    else
+    {
+        wynik_was.innerHTML += "Kasia<br>";
+    }
+}
+</script>
 </body>
 </html>
