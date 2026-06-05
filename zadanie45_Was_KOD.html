@@ -1,0 +1,43 @@
+<html> 
+   <body> 
+     <textarea cols="90" rows="24"> 
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<style>
+body{
+background:silver;
+font-family:Arial;
+}
+
+</style>
+</head>
+<body>
+<div id="wynik_was"></div>
+<script>
+let wynik_was = document.getElementById("wynik_was");
+let liczba_was = parseInt(prompt("Podaj liczbę:"));
+let ile_razy_was = (10 % 4) + 10;
+let wielkosc_liter_was = (10 % 3) + 40;
+
+wynik_was.innerHTML += "ilość wykonania pętli = " + ile_razy_was + "<br>";
+wynik_was.innerHTML += "wielkość liter = " + wielkosc_liter_was + "px<br><br>";
+
+for(let iwas = 1; iwas <= ile_razy_was; iwas++)
+{
+    if(liczba_was % 2 == 0)
+    {
+        wynik_was.innerHTML += "<span style='color:blue; font-size:" + wielkosc_liter_was + "px;'>Wasilewska</span><br>";
+    }
+    else
+    {
+        wynik_was.innerHTML += "<span style='color:green; font-size:" + wielkosc_liter_was + "px;'>Kasia</span><br>";
+    }
+}
+</script>
+</body>
+</html>
+      </textarea> 
+    </body> 
+</html> 

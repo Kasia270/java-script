@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<script>
+let koniec_petli_was = parseInt(prompt("Podaj koniec pętli:"));
+let wynik_was = "";
+for(let iwas = 2; iwas <= koniec_petli_was; iwas += 2)
+{
+    wynik_was += iwas + " ";
+}
+
+document.write("<h3>Liczby parzyste od 2 do " + koniec_petli_was + ":</h3>");
+document.write(wynik_was);
+
+</script>
+</body>
+</html>

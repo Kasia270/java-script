@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<div id="wynik"></div>
+
+<script>
+let wynik = document.getElementById("wynik");
+
+let a = 28;
+let b = 28 + 15; // 43
+let liczby = [a, b];
+let count = 0;
+let blok = "";
+
+for (let i = 0; i < liczby.length; i++) {
+
+    let n = liczby[i];
+
+    let pierw2 = Math.sqrt(n);
+    let pierw4 = Math.sqrt(pierw2);
+
+    blok +=
+        "i=" + n + " | " +
+        "pierw_2=" + pierw2.toFixed(2) + " | " +
+        "pierw_4=" + pierw4.toFixed(2) + "<br>";
+
+    count++;
+
+    if (count === 3) {
+        wynik.innerHTML += blok + "<hr>";
+        blok = "";
+        count = 0;
+    }
+}
+
+if (blok !== "") {
+    wynik.innerHTML += blok;
+}
+</script>
+</body>
+</html>

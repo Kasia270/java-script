@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<div style="color:red;font-size:50px;">
+<script>
+do
+{
+    var liczba1_was = prompt("Podaj wysokość=","");
+    var h_was = parseFloat(liczba1_was);
+
+}
+while(h_was <= 0);
+do
+{
+    var liczba2_was = prompt("Podaj podstawę=","");
+    var a_was = parseFloat(liczba2_was);
+
+}
+while(!(a_was > 0));
+var Pole_was = a_was * h_was / 2;
+document.write("Pole = " + Pole_was.toFixed(2) + " cm^2" + "<br>");
+</script>
+</div>
+</body>
+</html>

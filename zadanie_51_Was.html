@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie51_Wasilewska</title>
+
+</head>
+<body>
+<script>
+let ile_razy_was = parseInt(prompt("Ile razy napisać?",""));
+let tekst_was = prompt("Podaj inicjały:","KW");
+
+for(let iwas = 1; iwas <= ile_razy_was; iwas++)
+{
+    for(let kwas = 1; kwas <= iwas; kwas++)
+    {
+        document.write("&nbsp;&nbsp;&nbsp;");
+    }
+
+    document.write(iwas + "_" + tekst_was + "_" + iwas + "<br>");
+}
+</script>
+</body>
+</html>

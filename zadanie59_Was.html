@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<div id="wynik"></div>
+<script>
+let wynik = document.getElementById("wynik");
+
+let R = 1.5;
+let N = 0;
+
+let start = Math.floor(-R);
+let end = Math.ceil(R);
+
+for (let i = start; i <= end; i++) {
+    for (let j = start; j <= end; j++) {
+
+        if (i*i + j*j <= R*R) {
+            N++;
+        }
+    }
+}
+
+wynik.innerHTML =
+    "Promień R = " + R + "<br>" +
+    "Liczba punktów kratowych N(R) = " + N;
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<div id="wynik"></div>
+
+<script>
+let wynik = document.getElementById("wynik");
+
+let a = parseInt(prompt("Podaj pierwszą liczbę:"));
+let b = parseInt(prompt("Podaj drugą liczbę:"));
+
+if (a === b) {
+    alert("Liczby są równe - brak obliczeń");
+} else {
+
+    let start, end, step;
+    let color, size;
+
+    if (a < b) {
+        start = a;
+        end = b;
+        step = 1;
+        color = "green";
+        size = "16px";
+    } else {
+        start = a;
+        end = b;
+        step = -1;
+        color = "blue";
+        size = "8px";
+    }
+
+    let output = "";
+
+    for (let i = start; step > 0 ? i <= end : i >= end; i += step) {
+
+        if (i % 2 !== 0) {
+            output += `<span style="color:${color}; font-size:${size}">
+                        ${i}
+                       </span><br>`;
+        }
+    }
+
+    wynik.innerHTML = output;
+}
+</script>
+</body>
+</html>

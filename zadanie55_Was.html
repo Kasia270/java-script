@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<script>
+do
+{
+    let l1_was = parseInt(prompt("Podaj liczbę l1 z przedziału <20,60>:",""));
+    if(l1_was < 20 || l1_was > 60)
+    {
+        alert("Liczba l1 nie należy do przedziału <20,60>");
+    }
+    else
+    {
+        window.l1_was = l1_was;
+    }
+
+}
+while(l1_was < 20 || l1_was > 60);
+
+do
+{
+    let l2_was = parseInt(prompt("Podaj liczbę l2 z przedziału <20,60>:",""));
+
+    if(l2_was < 20 || l2_was > 60)
+    {
+        alert("Liczba l2 nie należy do przedziału <20,60>");
+    }
+    else
+    {
+        window.l2_was = l2_was;
+    }
+
+}
+while(l2_was < 20 || l2_was > 60);
+
+let pocz_was = parseInt(prompt("Podaj początkową wielkość tekstu:",""));
+let tekst_was = prompt("Podaj tekst:","Kasia");
+
+if(l1_was < l2_was)
+{
+    for(let iwas = pocz_was; iwas <= 100; iwas += 5)
+    {
+        document.write("<p style=\"font-size:"+iwas+"px; color:black;\">"+tekst_was+"</p>");
+    }
+}
+
+else if(l2_was < l1_was)
+{
+    for(let iwas = pocz_was; iwas >= 0; iwas -= 5)
+    {
+        document.write("<p style=\"font-size:"+iwas+"px; color:black;\">"+tekst_was+"</p>");
+    }
+}
+
+else
+{
+    document.write("<p style=\"font-size:"+pocz_was+"px; color:black;\">"+tekst_was+"</p>");
+}
+</script>
+</body>
+</html>

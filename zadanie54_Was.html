@@ -2,11 +2,15 @@
 <html lang="pl">
 <head>
 <meta charset="utf-8">
+
 </head>
 <body>
 <script>
-let a_was = (10 % 4) + 5;
-let b_was = (5 % 6) + 20;
+
+let imie_was = prompt("Podaj imię=","");
+let nazwisko_was = prompt("Podaj nazwisko=","");
+let a_was = (nazwisko_was.length % 4) + 5;
+let b_was = (imie_was.length % 6) + 20;
 
 document.write("a = " + a_was + "<br>");
 document.write("b = " + b_was + "<br><br>");
